@@ -17,18 +17,18 @@ public class FortuneTellerFrame extends JFrame
 
     String[] fortunes = //this is quite cool -------CHANGE TO FUNNY STUFF------
             {
-                    "F1",
-                    "F2",
-                    "F3",
-                    "F4",
-                    "F5",
-                    "F6",
-                    "F7",
-                    "F8",
-                    "F9",
-                    "F10",
-                    "F11",
-                    "F12"
+                    "You will get a cat soon.",
+                    "RUN!",
+                    "Count your shadows.",
+                    "Don't blick. Blink and you're dead.",
+                    "People can save planets or wreck them. That’s the choice. Be the best of humanity.",
+                    "The Doctor lies.",
+                    "They are definitely a madman with a box!",
+                    "Bow Ties are cool, wear more.",
+                    "Time is not the boss of you.",
+                    "If you are crash and buring, call it an adventure.",
+                    "Books are the best weapons in the world.",
+                    "Something old, Something New, Something Borrowed, Something Blue. Follow the noise."
             };
     Random rnd = new Random();
 
@@ -82,7 +82,7 @@ public class FortuneTellerFrame extends JFrame
     {
         displayPnl = new JPanel();
 
-        fortuneTA =  new JTextArea(12, 55);
+        fortuneTA =  new JTextArea(12, 70);
         scroller = new JScrollPane(fortuneTA);
 
         displayPnl.add(scroller);
