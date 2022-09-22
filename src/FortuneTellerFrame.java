@@ -14,7 +14,7 @@ public class FortuneTellerFrame extends JFrame
 
 
     int curFortuneDex = -1;
-    int newDex;
+    int newDex = 1;
 
     String[] fortunes = //this is quite cool -------CHANGE TO FUNNY STUFF------
             {
@@ -61,22 +61,23 @@ public class FortuneTellerFrame extends JFrame
         btnPnl.setLayout(new GridLayout(1,2));
         quitBtn = new JButton("Quit");
         fortuneBtn = new JButton("Read My Fortune!");
+        btnPnl.add(fortuneBtn);
+        btnPnl.add(quitBtn);
 
         fortuneBtn.addActionListener(
                 (ActionEvent ae) ->
                 {//grab a random index(int) that isn't the same as the last chosen
                     do{
                         newDex = rnd.nextInt(fortunes.length);
+                        System.out.println("Your Fortune: " + newDex);
 
-                        }while(newDex != curFortuneDex);
+                        }while(newDex == curFortuneDex);
                     curFortuneDex = newDex;
                     fortuneTA.append(fortunes[curFortuneDex] + "\n");
 
                 }
                 );
 
-        btnPnl.add(fortuneBtn);
-        btnPnl.add(quitBtn);
         quitBtn.addActionListener((ActionEvent ae) -> System.exit(0));
 
         mainPnl.add(BorderLayout.SOUTH, btnPnl);
