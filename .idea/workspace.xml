@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a90bcc52-8e2e-48e3-a09d-a4b8b2c3370d" name="Changes" comment="bottom panel done and mid panel basic">
+    <list default="true" id="a90bcc52-8e2e-48e3-a09d-a4b8b2c3370d" name="Changes" comment="bottom panel done for real and mid panel basic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FortuneTellerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FortuneTellerFrame.java" afterDir="false" />
     </list>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663857863060</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bottom panel done for real and mid panel basic">
+      <created>1663858314934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663858314934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +120,7 @@
     <MESSAGE value="quit button works" />
     <MESSAGE value="bottom and mid panel basic" />
     <MESSAGE value="bottom panel done and mid panel basic" />
-    <option name="LAST_COMMIT_MESSAGE" value="bottom panel done and mid panel basic" />
+    <MESSAGE value="bottom panel done for real and mid panel basic" />
+    <option name="LAST_COMMIT_MESSAGE" value="bottom panel done for real and mid panel basic" />
   </component>
 </project>

@@ -43,9 +43,9 @@ public class FortuneTellerFrame extends JFrame
 
         mainPnl = new JPanel();
         mainPnl.setLayout(new BorderLayout());
-
         add(mainPnl);
-        //createTitlePanel();
+        mainPnl.setSize(75%, 100%);//////FCKNFJOE:BGJOWS
+        createTitlePanel();
         createDisplayPanel();
         createButtonPanel();
 
@@ -55,12 +55,48 @@ public class FortuneTellerFrame extends JFrame
         setVisible(true);
     }
 
-    private void createButtonPanel() //quit done // add fortune stuff
+    private void createTitlePanel()
+    {
+
+        titlePnl = new JPanel();
+        icon = new ImageIcon("src/crystalBall.png", "Crystal Ball Icon");
+
+
+        titleLbl = new JLabel("Fortune Teller", icon, JLabel.CENTER);
+        titleLbl.setFont(new Font("Comic Sans MS", Font.PLAIN, 48));
+
+        //
+        titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
+        titleLbl.setHorizontalAlignment(JLabel.CENTER);
+
+
+        titlePnl.add(titleLbl);
+        mainPnl.add(titlePnl, BorderLayout.NORTH);
+    }
+
+    private void createDisplayPanel() //DONE
+    {
+        displayPnl = new JPanel();
+
+        fortuneTA =  new JTextArea(12, 60);
+        scroller = new JScrollPane(fortuneTA);
+
+        displayPnl.add(scroller);
+        mainPnl.add(displayPnl, BorderLayout.CENTER);
+    }
+
+
+
+    private void createButtonPanel() //DONE
     {
         btnPnl = new JPanel();
         btnPnl.setLayout(new GridLayout(1,2));
+
         quitBtn = new JButton("Quit");
+        quitBtn.setFont(new Font("Monospaced", Font.PLAIN, 24));
         fortuneBtn = new JButton("Read My Fortune!");
+        fortuneBtn.setFont(new Font("Monospaced", Font.PLAIN, 24));
+
         btnPnl.add(fortuneBtn);
         btnPnl.add(quitBtn);
 
@@ -69,11 +105,13 @@ public class FortuneTellerFrame extends JFrame
                 {//grab a random index(int) that isn't the same as the last chosen
                     do{
                         newDex = rnd.nextInt(fortunes.length);
-                        System.out.println("Your Fortune: " + newDex);
+                        //System.out.println("Your Fortune: " + newDex);
 
                         }while(newDex == curFortuneDex);
                     curFortuneDex = newDex;
+
                     fortuneTA.append(fortunes[curFortuneDex] + "\n");
+                    fortuneTA.setFont(new Font("Times New Roman", Font.PLAIN, 22));
 
                 }
                 );
@@ -84,17 +122,7 @@ public class FortuneTellerFrame extends JFrame
 
     }
 
-    private void createDisplayPanel()
-    {
-        displayPnl = new JPanel();
 
-        fortuneTA =  new JTextArea(12, 60);
-        scroller = new JScrollPane(fortuneTA);
-
-        displayPnl.add(scroller);
-
-        mainPnl.add(displayPnl, BorderLayout.CENTER);
-    }
 
 
 
