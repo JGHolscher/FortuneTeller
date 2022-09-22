@@ -12,7 +12,6 @@ public class FortuneTellerFrame extends JFrame
     JTextArea fortuneTA;
     JButton quitBtn, fortuneBtn;
 
-
     int curFortuneDex = -1;
     int newDex = 1;
 
@@ -33,52 +32,57 @@ public class FortuneTellerFrame extends JFrame
             };
     Random rnd = new Random();
 
-    public FortuneTellerFrame()
+    public FortuneTellerFrame() //DONE
     {
-        //sub method time for each of the 3 panels
-
         setTitle("Fortune Teller");
-        setSize(800, 800); //-----------this is where you do centering later on 3/4--------
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Toolkit kit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = kit.getScreenSize();
+
+        int screenHeight = screenSize.height;
+        int screenWidth = screenSize.width;
+
+        setSize((screenWidth /4) * 3 , screenHeight);
+        setLocationRelativeTo(null); //centers
 
         mainPnl = new JPanel();
         mainPnl.setLayout(new BorderLayout());
+
         add(mainPnl);
-        mainPnl.setSize(75%, 100%);//////FCKNFJOE:BGJOWS
         createTitlePanel();
         createDisplayPanel();
         createButtonPanel();
 
-
-
-
         setVisible(true);
     }
 
-    private void createTitlePanel()
+    private void createTitlePanel()//DONE wooooo
     {
-
         titlePnl = new JPanel();
-        icon = new ImageIcon("src/crystalBall.png", "Crystal Ball Icon");
-
+        icon = new ImageIcon("src/crystalBall.png");
 
         titleLbl = new JLabel("Fortune Teller", icon, JLabel.CENTER);
         titleLbl.setFont(new Font("Comic Sans MS", Font.PLAIN, 48));
 
-        //
+        //aligns text and image to be stacked not side by side
         titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
-        titleLbl.setHorizontalAlignment(JLabel.CENTER);
+        titleLbl.setHorizontalTextPosition(JLabel.CENTER);
 
 
         titlePnl.add(titleLbl);
         mainPnl.add(titlePnl, BorderLayout.NORTH);
     }
 
+
+
+
+
     private void createDisplayPanel() //DONE
     {
         displayPnl = new JPanel();
 
-        fortuneTA =  new JTextArea(12, 60);
+        fortuneTA =  new JTextArea(12, 55);
         scroller = new JScrollPane(fortuneTA);
 
         displayPnl.add(scroller);
@@ -121,9 +125,4 @@ public class FortuneTellerFrame extends JFrame
         mainPnl.add(BorderLayout.SOUTH, btnPnl);
 
     }
-
-
-
-
-
 }
