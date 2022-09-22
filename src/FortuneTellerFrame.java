@@ -8,7 +8,7 @@ public class FortuneTellerFrame extends JFrame
     JLabel titleLbl;
     ImageIcon icon;
     JScrollPane scroller;
-    JTextArea fortuneTxt;
+    JTextArea fortuneTA;
     JButton quitBtn, fortuneBtn;
 
 
@@ -25,7 +25,7 @@ public class FortuneTellerFrame extends JFrame
 
         add(mainPnl);
         //createTitlePanel();
-        //createDisplayPanel();
+        createDisplayPanel();
         createButtonPanel();
 
 
@@ -34,7 +34,7 @@ public class FortuneTellerFrame extends JFrame
         setVisible(true);
     }
 
-    private void createButtonPanel()
+    private void createButtonPanel() //quit done // add fortune stuff
     {
         btnPnl = new JPanel();
         btnPnl.setLayout(new GridLayout(1,2));
@@ -49,6 +49,19 @@ public class FortuneTellerFrame extends JFrame
 
         mainPnl.add(BorderLayout.SOUTH, btnPnl);
 
+    }
+
+    private void createDisplayPanel()
+    {
+        displayPnl = new JPanel();
+
+
+        fortuneTA =  new JTextArea(12, 60);
+        scroller = new JScrollPane(fortuneTA);
+
+        displayPnl.add(scroller);
+
+        mainPnl.add(displayPnl, BorderLayout.CENTER);
     }
 
 

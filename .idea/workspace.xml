@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a90bcc52-8e2e-48e3-a09d-a4b8b2c3370d" name="Changes" comment="first">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a90bcc52-8e2e-48e3-a09d-a4b8b2c3370d" name="Changes" comment="quit button works">
       <change beforePath="$PROJECT_DIR$/src/FortuneTellerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FortuneTellerFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FortuneTellerViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FortuneTellerViewer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="FortuneTellerViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FortuneTellerViewer" />
+      <module name="FortuneTeller" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FortuneTellerViewer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663854961699</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="quit button works">
+      <created>1663856399102</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663856399102</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -68,6 +87,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="quit button works" />
+    <option name="LAST_COMMIT_MESSAGE" value="quit button works" />
   </component>
 </project>
